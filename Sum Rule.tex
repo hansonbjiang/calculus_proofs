@@ -1,0 +1,33 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+% \geometry{letterpaper, margin=1in}
+
+\newtheorem{proposition}{Proposition}
+\newcommand{\ddx}{\frac{d}{dx}}
+
+\begin{document}
+
+\title{Sum Rule}
+\author{Hanson Jiang}
+\maketitle
+
+\begin{proposition}
+  $\forall f, g,$ both differentiable at $c$,
+  $\ddx (f(x)+g(x)) = \ddx f(x) + \ddx g(x)$.
+
+\end{proposition}
+
+\begin{proof}
+  \begin{align*}
+    \ddx f(x) + \ddx g(x)
+    &=\lim_{x\rightarrow c} \frac{f(x)-f(c)}{x-c}
+    +\lim_{x\rightarrow c} \frac{g(x)-g(c)}{x-c} \\
+    &= \lim_{x\rightarrow c} \frac{f(x)-f(c)}{x-c} + \frac{g(x)-g(c)}{x-c} \\
+    &= \lim_{x\rightarrow c} \frac{f(x)-f(c) + g(x)-g (c)}{x-c} \\
+    &= \lim_{x\rightarrow c} \frac{(f(x)+g(x)) - (f(c)+g (c))}{x-c} \\
+    &= \ddx (f(x)+g(x))
+  \end{align*}
+\end{proof}
+
+\end{document}
